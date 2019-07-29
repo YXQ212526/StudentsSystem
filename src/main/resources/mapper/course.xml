@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yuanxueqi.studentsystem.demo.dao.CourseMapper">
+  <resultMap id="BaseResultMap" type="com.yuanxueqi.studentsystem.demo.POJO.Course">
+    <id column="course_id" property="id"/>
+    <result column="name" property="name"/>
+  </resultMap>
+
+
+  <select id="showCourse" resultMap="BaseResultMap">
+        SELECT * FROM course WHERE course_id = #{id}
+    </select>
+
+  <select id="showCourses" resultMap="BaseResultMap">
+        SELECT * FROM course
+    </select>
+
+
+  <insert id="create">
+        insert into course(
+        name
+        )
+         values(
+         #{name}
+         )
+    </insert>
+
+  <update id="changeName">
+       update course set name=#{name} where course_id = #{id}
+    </update>
+
+  <delete id="delete">
+       delete from course  where course_id = #{id}
+    </delete>
+
+
+</mapper>

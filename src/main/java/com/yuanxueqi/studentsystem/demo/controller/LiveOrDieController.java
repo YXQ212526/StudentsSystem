@@ -16,12 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class LiveOrDieController {
 
   @Autowired
-  LiveOrDieSerivce liveOrDieSerivce;
+  private LiveOrDieSerivce liveOrDieSerivce;
 
   @ApiOperation("输入学生ID查看所有授课老师")
-  @GetMapping("/live/die/{id}")
-  List<String> liveOrDie(@PathVariable("id") int id) {
-    return liveOrDieSerivce.liveOrDie(id);
+  @GetMapping("/live/die/{studentId}")
+  public List<String> liveOrDie(@PathVariable("studentId") int studentId) {
+    return liveOrDieSerivce.liveOrDie(studentId);
   }
 
 }

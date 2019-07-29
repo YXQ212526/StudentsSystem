@@ -3,7 +3,7 @@ package com.yuanxueqi.studentsystem.demo.controller;
 import java.util.List;
 
 
-import com.yuanxueqi.studentsystem.demo.POJO.Course;
+import com.yuanxueqi.studentsystem.demo.pojo.Course;
 import com.yuanxueqi.studentsystem.demo.service.CourseService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @Api(description = "课程")
@@ -23,31 +24,32 @@ import org.springframework.web.bind.annotation.RestController;
 public class CourseController {
 
   @Autowired
-  CourseService courseService;
+  private CourseService courseService;
 
   @ApiOperation("建课")
   @PostMapping("/create")
-  String createCourse(String name) {
+  public String createCourse(@RequestParam(name = "name") String name) {
 
     return courseService.create(name);
   }
 
   @ApiOperation("改课名")
   @PostMapping("/update")
-  String changeCourseName(@ApiParam("课程ID") Integer id, @ApiParam("新名字") String name) {
-    return courseService.changeName(id, name);
+  public String changeCourseName(@ApiParam("课程ID") @RequestParam(name = "CourseId") Integer CourseId,
+      @ApiParam("新名字") @RequestParam(name = "name") String name) {
+    return courseService.changeName(CourseId, name);
   }
 
   @ApiOperation("删课")
   @DeleteMapping("/delete")
-  String deleteCourse(@ApiParam("课程ID") Integer id) {
-    return courseService.delete(id);
+  public String deleteCourse(@ApiParam("课程ID") @RequestParam(name = "CourseId") Integer CourseId) {
+    return courseService.delete(CourseId);
   }
 
   @ApiOperation("根据课程ID显示课名")
-  @GetMapping("/{id}")
-  public Course showCourse(@PathVariable("id") Integer id) {
-    return courseService.showCourse(id);
+  @GetMapping("/{CourseId}")
+  public Course showCourse(@PathVariable("CourseId") Integer CourseId) {
+    return courseService.showCourse(CourseId);
   }
 
   @ApiOperation("显示全部课程")

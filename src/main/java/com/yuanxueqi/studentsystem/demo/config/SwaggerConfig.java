@@ -1,4 +1,4 @@
-package com.yuanxueqi.studentsystem.demo.Config;
+package com.yuanxueqi.studentsystem.demo.config;
 
 
 import org.springframework.context.annotation.Bean;

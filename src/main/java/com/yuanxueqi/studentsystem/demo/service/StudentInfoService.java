@@ -3,7 +3,7 @@ package com.yuanxueqi.studentsystem.demo.service;
 import javax.annotation.Resource;
 
 import com.yuanxueqi.studentsystem.demo.dao.StudentInfoMapper;
-import com.yuanxueqi.studentsystem.demo.POJO.Student;
+import com.yuanxueqi.studentsystem.demo.pojo.Student;
 
 import org.springframework.stereotype.Service;
 

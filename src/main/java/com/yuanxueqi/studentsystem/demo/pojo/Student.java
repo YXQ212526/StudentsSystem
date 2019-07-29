@@ -1,4 +1,4 @@
-package com.yuanxueqi.studentsystem.demo.POJO;
+package com.yuanxueqi.studentsystem.demo.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,10 +14,10 @@ import lombok.ToString;
 @NoArgsConstructor
 public class Student {
 
-  public Integer id;
-  public String name;
-  public String sex;
-  public Integer age;
-  public String phone;
+  private Integer id;
+  private String name;
+  private String sex = "female";
+  private Integer age;
+  private String phone;
 
 }

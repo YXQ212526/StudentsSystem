@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
-import com.yuanxueqi.studentsystem.demo.POJO.Course;
+import com.yuanxueqi.studentsystem.demo.pojo.Course;
 import com.yuanxueqi.studentsystem.demo.dao.CourseMapper;
 
 import org.springframework.stereotype.Service;

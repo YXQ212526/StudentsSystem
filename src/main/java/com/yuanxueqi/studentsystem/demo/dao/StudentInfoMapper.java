@@ -1,6 +1,6 @@
 package com.yuanxueqi.studentsystem.demo.dao;
 
-import com.yuanxueqi.studentsystem.demo.POJO.Student;
+import com.yuanxueqi.studentsystem.demo.pojo.Student;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

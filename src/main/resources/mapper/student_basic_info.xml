@@ -3,7 +3,7 @@
 <mapper namespace="com.yuanxueqi.studentsystem.demo.dao.StudentInfoMapper" >
 
 
-  <select id="getById"  resultType="com.yuanxueqi.studentsystem.demo.POJO.Student">
+  <select id="getById"  resultType="com.yuanxueqi.studentsystem.demo.pojo.Student">
         SELECT * FROM student_basic_info WHERE id = #{id}
     </select>
 

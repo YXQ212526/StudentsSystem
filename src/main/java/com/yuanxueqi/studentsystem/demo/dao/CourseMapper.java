@@ -2,7 +2,7 @@ package com.yuanxueqi.studentsystem.demo.dao;
 
 import java.util.List;
 
-import com.yuanxueqi.studentsystem.demo.POJO.Course;
+import com.yuanxueqi.studentsystem.demo.pojo.Course;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

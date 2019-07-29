@@ -15,7 +15,7 @@ public class StudentInfoService {
   @Resource
   StudentInfoMapper studentInfoMapper;
 
-  public String insertInfo(@RequestBody Student student) {
+  public String insertInfo(Student student) {
     if (!Sex.judge(student.getSex())) {
       return "please input male or female ";
     }

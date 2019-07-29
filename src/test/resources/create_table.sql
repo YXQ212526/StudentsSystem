@@ -2,10 +2,12 @@ use student;
 /*学生信息表*/
 create table `student_basic_info`(
   `id` int auto_increment,
-  `sex` varchar(10) default "",
+  `sex` varchar(10) ,
   `age` int ,
   `phone` varchar(11),
-  primary key(`id`));
+  primary key(`id`)
+  );
+
 /*课程信息表*/
 create table course(
 `course_id` int not null auto_increment,

@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: pro
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+---
+#开发环境配置
+spring:
+  profiles: pro
+  datasource:
+   url: jdbc:mysql://localhost:3306/student?useUnicode=true&characterEncoding=UTF-8
+   username: root
+   password: Yxq12345!
+   driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+
+---
+#测试环境配置
+spring:
+  profiles: test
+  datasource:
+   driver-class-name: org.h2.Driver
+   url: jdbc:h2:mem:test
+   schema: create_table.sql
+   username: root
+   password: 123456
+

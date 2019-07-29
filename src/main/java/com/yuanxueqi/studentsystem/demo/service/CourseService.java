@@ -16,7 +16,6 @@ public class CourseService {
   CourseMapper courseMapper;
 
   public String create(String name) {
-
     return courseMapper.create(name) == 1 ? "success!" : "fail!";
   }
 

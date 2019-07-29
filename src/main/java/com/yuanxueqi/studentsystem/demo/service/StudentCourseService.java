@@ -8,14 +8,13 @@ import com.yuanxueqi.studentsystem.demo.dao.StudentCourseMapper;
 import com.yuanxueqi.studentsystem.demo.dao.StudentInfoMapper;
 
 
-import org.springframework.stereotype.Service;
 
+import org.springframework.stereotype.Service;
 @Service
 public class StudentCourseService {
 
   @Resource
   StudentCourseMapper studentCourseMapper;
-
   @Resource
   StudentInfoMapper studentInfoMapper;
 

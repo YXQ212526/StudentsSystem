@@ -1,5 +1,7 @@
 package com.yuanxueqi.studentsystem.demo.service;
 
+import java.util.stream.Collectors;
+
 import javax.annotation.Resource;
 
 import com.yuanxueqi.studentsystem.demo.dao.CourseMapper;
@@ -28,14 +30,12 @@ public class TeacherCourseService {
 
     if (teacherCourseMapper.insert(courseId, name) > 0) {
       if (!CollectionUtils.isEmpty(studentCourseMapper.findBySId(courseId))) {
-       // studentCourseMapper.findBySId(courseId).stream().map((val) -> liveOrDieMapper.create(val, name));
-        for (Integer val:studentCourseMapper.findBySId(courseId))
-        {
-          liveOrDieMapper.create(val,name);
-        }
-        return "success!";
-
+        studentCourseMapper.findBySId(courseId).forEach((val) -> liveOrDieMapper.create(val, name));
+//        for (Integer val : studentCourseMapper.findBySId(courseId)) {
+//          liveOrDieMapper.create(val, name);
+//        }
       }
+      return "success!";
     }
     return "failed!";
 

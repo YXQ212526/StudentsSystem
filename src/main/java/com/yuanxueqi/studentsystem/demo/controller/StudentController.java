@@ -33,14 +33,14 @@ public class StudentController {
 
   @ApiOperation("根据学生ID改学生电话号")
   @PostMapping("/update")
-  public int updatePhoneById(@RequestParam(name = "studentId") Integer studentId,
+  public String updatePhoneById(@RequestParam(name = "studentId") Integer studentId,
       @RequestParam(name = "newPhone") String newPhone) {
     return studentInfoService.updatePhoneById(studentId, newPhone);
   }
 
   @ApiOperation("新增学生信息")
   @PostMapping("/insert")
-  public int insertInfo(@RequestBody Student student) {
+  public String insertInfo(@RequestBody @ApiParam("学生信息") Student student) {
     return studentInfoService.insertInfo(student);
   }
 

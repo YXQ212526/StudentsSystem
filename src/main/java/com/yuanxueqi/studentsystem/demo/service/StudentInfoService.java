@@ -13,17 +13,17 @@ public class StudentInfoService {
   @Resource
   StudentInfoMapper studentInfoMapper;
 
-  public int insertInfo(Student student) {
-    return studentInfoMapper.insertInfo(student);
+  public String insertInfo(Student student) {
+    return studentInfoMapper.insertInfo(student) == 1 ? "success!" : "failed!";
   }
 
   public Student getById(int id) {
-    return studentInfoMapper.getById(id) == null ? null : studentInfoMapper.getById(id);
+    return studentInfoMapper.getById(id);
 
   }
 
-  public int updatePhoneById(int id, String phone) {
-    return studentInfoMapper.updatePhoneById(id, phone);
+  public String updatePhoneById(int id, String phone) {
+    return studentInfoMapper.updatePhoneById(id, phone) == 1 ? "success!" : "failed!";
   }
 
 }

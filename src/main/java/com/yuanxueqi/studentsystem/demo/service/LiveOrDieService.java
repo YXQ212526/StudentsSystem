@@ -5,17 +5,17 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import com.yuanxueqi.studentsystem.demo.dao.LiveOrDieMapper;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 
 @Service
-public class LiveOrDieSerivce {
+public class LiveOrDieService {
 
   @Resource
   LiveOrDieMapper liveOrDieMapper;
 
   public Integer create(int studentId, String name) {
-   return liveOrDieMapper.create(studentId,name);
+    return liveOrDieMapper.create(studentId, name);
 
   }
 

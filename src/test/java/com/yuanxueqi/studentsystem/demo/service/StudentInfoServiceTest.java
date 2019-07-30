@@ -25,7 +25,7 @@ public class StudentInfoServiceTest {
         .phone("177")
         .sex("female")
         .build();
-    Assert.assertEquals(studentInfoService.insertInfo(student), "success");
+    Assert.assertEquals(studentInfoService.insertInfo(student), "success!");
     Student student_wrong = Student.builder()
         .age(11)
         .name("marry")

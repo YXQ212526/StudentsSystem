@@ -1,6 +1,5 @@
 package com.yuanxueqi.studentsystem.demo.service;
 
-import java.util.stream.Collectors;
 
 import javax.annotation.Resource;
 
@@ -25,7 +24,7 @@ public class TeacherCourseService {
 
   public String addTeacherCourse(Integer courseId, String name) {
     if (courseMapper.showCourse(courseId) == null) {
-      return "没有这门课！";
+      return "没有这门课!";
     }
 
     if (teacherCourseMapper.insert(courseId, name) > 0) {

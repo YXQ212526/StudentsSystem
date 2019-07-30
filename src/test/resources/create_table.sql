@@ -6,6 +6,7 @@ create table `student_basic_info`
 (
     `id`    int auto_increment,
     `sex`   varchar(10),
+    `name` varchar(10),
     `age`   int,
     `phone` varchar(11),
     primary key (`id`)

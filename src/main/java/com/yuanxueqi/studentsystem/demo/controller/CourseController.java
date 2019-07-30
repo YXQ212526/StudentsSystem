@@ -9,7 +9,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -35,21 +35,21 @@ public class CourseController {
 
   @ApiOperation("改课名")
   @PostMapping("/update")
-  public String changeCourseName(@ApiParam("课程ID") @RequestParam(name = "CourseId") Integer CourseId,
+  public String changeCourseName(@ApiParam("课程ID") @RequestParam(name = "courseId") Integer courseId,
       @ApiParam("新名字") @RequestParam(name = "name") String name) {
-    return courseService.changeName(CourseId, name);
+    return courseService.changeName(courseId, name);
   }
 
   @ApiOperation("删课")
-  @DeleteMapping("/delete")
-  public String deleteCourse(@ApiParam("课程ID") @RequestParam(name = "CourseId") Integer CourseId) {
-    return courseService.delete(CourseId);
+  @PostMapping("/delete")
+  public String deleteCourse(@ApiParam("课程ID") @RequestParam(name = "courseId") Integer courseId) {
+    return courseService.delete(courseId);
   }
 
   @ApiOperation("根据课程ID显示课名")
-  @GetMapping("/{CourseId}")
-  public Course showCourse(@PathVariable("CourseId") Integer CourseId) {
-    return courseService.showCourse(CourseId);
+  @GetMapping("/{courseId}")
+  public Course showCourse(@PathVariable("courseId") Integer courseId) {
+    return courseService.showCourse(courseId);
   }
 
   @ApiOperation("显示全部课程")

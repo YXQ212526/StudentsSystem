@@ -36,8 +36,14 @@ public class StudentInfoServiceTest {
 
   }
 
-//  @Test
-//  public void get() {
-//    Assert.assertEquals(studentInfoService.getById(1).getAge().intValue(),12);
-//  }
+  @Test
+  public void get() {
+    Assert.assertEquals(studentInfoService.getById(1).getAge().intValue(),11);
+  }
+
+  @Test
+  public void update() {
+    Assert.assertEquals(studentInfoService.updatePhoneById(1, "123"), "success!");
+    Assert.assertEquals(studentInfoService.getById(1).getPhone(), "123");
+  }
 }

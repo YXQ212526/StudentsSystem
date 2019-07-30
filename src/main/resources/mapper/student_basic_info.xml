@@ -9,10 +9,12 @@
 
   <insert id="insertInfo"  keyProperty="id" useGeneratedKeys="true"  >
         insert into student_basic_info(
+        name,
         age,
         sex,
         phone)
          values(
+         #{name},
          #{age},
          #{sex},
          #{phone}

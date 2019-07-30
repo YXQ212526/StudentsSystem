@@ -17,7 +17,8 @@ spring.h2.console.enabled: true
 spring.datasource.platform: h2
 
 #进行该配置后，每次启动程序，程序都会运行resources/sql/schema.sql文件，对数据库的结构进行操作。
-spring.datasource.schema: classpath:create_table.sql
+spring.datasource.schema: classpath*:create_table.sql
+
 #进行该配置后，每次启动程序，程序都会运行resources/sql/data.sql文件，对数据库的数据操作。
 mybatis:
   mapper-locations: classpath*:mapper/*.xml

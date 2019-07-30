@@ -14,10 +14,10 @@ public class LiveOrDieService {
   @Resource
   LiveOrDieMapper liveOrDieMapper;
 
-  public Integer create(int studentId, String name) {
-    return liveOrDieMapper.create(studentId, name);
-
-  }
+//  public Integer create(int studentId, String name) {
+//    return liveOrDieMapper.create(studentId, name);
+//
+//  }
 
   public List<String> liveOrDie(int studentId) {
     return liveOrDieMapper.select(studentId);

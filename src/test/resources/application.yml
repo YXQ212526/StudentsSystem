@@ -1,5 +1,6 @@
 #配置数据库连接地址
 spring.datasource.url: jdbc:h2:mem:student;MODE=MySQL;DATABASE_TO_UPPER=false;INIT=CREATE SCHEMA IF NOT EXISTS student;
+
 #配置数据库驱动
 spring.datasource.driver-class-name: org.h2.Driver
 #配置数据库用户名
@@ -22,3 +23,4 @@ spring.datasource.schema: classpath:create_table.sql
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
+

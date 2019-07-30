@@ -1,4 +1,4 @@
--- use student;
+use student;
 /*学生信息表*/
 create table `student_basic_info`(
   `id` int auto_increment,

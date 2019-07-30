@@ -1,8 +1,5 @@
 package com.yuanxueqi.studentsystem.demo.service;
 
-import java.util.List;
-
-import com.yuanxueqi.studentsystem.demo.pojo.Course;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,11 +8,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.*;
-
-@SpringBootTest(webEnvironment = RANDOM_PORT)
+@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @RunWith(SpringRunner.class)
-
 public class CourseServiceTest {
 
   @Autowired
@@ -24,7 +18,7 @@ public class CourseServiceTest {
   @Test
   public void create() {
     String str = courseService.create("math");
-    Assert.assertEquals(str, "success");
+    Assert.assertEquals(str, "success!");
   }
 
 //  @Test
